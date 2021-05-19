@@ -1,0 +1,196 @@
+\documentclass[10.5pt,compsoc]{CjC}
+\usepackage{CJKutf8}
+%\usepackage{CJK}
+\usepackage{graphicx}
+\usepackage{footmisc}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[noadjust]{cite}
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{ccaption}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{xcolor,stfloats}
+\usepackage{comment}
+\setcounter{page}{1}
+\graphicspath{{figures/}}
+\usepackage{cuted}%flushend,
+\usepackage{captionhack}
+\usepackage{epstopdf}
+%\usepackage{ccmap}
+%\CJKtilde
+%\usepackage{CJKpunct} 
+%\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+
+%===============================%
+
+%\firstfootname{ \quad \quad }
+\headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{\begin{CJK*}{GBK}{song}计\quad \quad 算\quad \quad 机\quad \quad 学\quad \quad 报\end{CJK*}} \hspace {50mm} \mbox{\begin{CJK*}{GBK}{song}2019 年\end{CJK*}}}}%
+\headoddname{\begin{CJK*}{GBK}{song}? 期 \hfill
+作者姓名等：论文题目\end{CJK*}}%
+
+%footnote use of *
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
+\renewcommand\footnotelayout{\zihao{5-}}
+
+\newtheoremstyle{mystyle}{0pt}{0pt}{\normalfont}{1em}{\bf}{}{1em}{}
+\theoremstyle{mystyle}
+\renewcommand\figurename{figure~}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\newcommand{\abc}{\color{white}\vrule width 2pt}
+\makeatletter
+\renewcommand{\@biblabel}[1]{[#1]\hfill}
+\makeatother
+\setlength\parindent{2em}
+%\renewcommand{\hth}{\begin{CJK*}{GBK}{hei}}
+%\renewcommand{\htss}{\begin{CJK*}{GBK}{song}}
+
+
+\begin{document}
+\hyphenpenalty=50000
+\makeatletter
+\newcommand\mysmall{\@setfontsize\mysmall{7}{9.5}}
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+
+\let\temp\footnote
+\renewcommand \footnote[1]{\temp{\zihao{-5}#1}}
+
+
+\thispagestyle{plain}%
+\thispagestyle{empty}%
+\pagestyle{CjCheadings}
+
+\begin{table*}[!t]
+\vspace {-13mm}
+\begin{tabular}{p{168mm}}
+\zihao{5-}\begin{CJK*}{GBK}{song}
+第??卷\quad 第?期 \hfill 计\quad 算\quad 机\quad 学\quad 报\hfill Vol. ??  No. ?\end{CJK*}\\
+\zihao{5-}\begin{CJK*}{GBK}{song}
+20??年?月 \hfill CHINESE JOURNAL OF COMPUTERS \hfill ???. 20??\end{CJK*}\\
+\hline\\[-4.5mm]
+\hline\end{tabular}
+
+\centering
+\vspace {11mm}
+\begin{CJK}{GBK}{hei}
+{\zihao{2} 题目（中英文题目一致)字体为2号黑体(全文除特别声明外， 外文统一用Times New Roman) }
+\end{CJK}
+\vskip 5mm
+
+{\zihao{3}\begin{CJK*}{GBK}{fs}
+作者名$^{1)}$\quad  作者名$^{2),3)}$ \quad 作者名$^{3) }$($^*$字体为3号仿宋*作者)\end{CJK*}}
+
+\vspace {5mm}
+\zihao{6}{\begin{CJK*}{GBK}{song}
+$^{1)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)
+*字体为6号宋体*单位
+\end{CJK*}}
+
+\zihao{6}{\begin{CJK*}{GBK}{song}
+$^{2)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名
+邮政编码)*中英文单位名称、作者姓名须一致*
+\end{CJK*}}
+
+\zihao{6}{\begin{CJK*}{GBK}{song}
+$^{3)}$(单位全名 部门(系)全名, 市(或直辖市) 国家名 邮政编码)
+\end{CJK*}}
+
+\zihao{6}{\begin{CJK*}{GBK}{hei}
+论文定稿后，作者署名、单位无特殊情况不能变更。若变更，须提交签章申请，国家名为中国可以不写，省会城市不写省的名称，其他国家必须写国家名。
+\end{CJK*}}
+
+\vskip 5mm
+{\centering
+\begin{tabular}{p{160mm}}
+\zihao{5-}{
+\setlength{\baselineskip}{16pt}\selectfont{
+\noindent\begin{CJK*}{GBK}{hei}摘\quad 要\quad \end{CJK*} \begin{CJK*}{GBK}{song}
+*中文摘要内容置于此处(英文摘要中要有这些内容)，字体为小5号宋体。摘要贡献部分，要有数据支持，不要出现``...大大提高''、``...显著改善''等描述，正确的描述是``比{\ldots}提高X{\%}''、
+``在{\ldots}上改善X{\%}''。*摘要
+
+\end{CJK*}\par}}\\[2mm]
+
+\zihao{5-}{\noindent
+\begin{CJK*}{GBK}{hei}关键词\end{CJK*} \quad \begin{CJK*}{GBK}{song}{*关键词（中文关键字与英文关键字对应且一致，应有5-7个关键词)；关键词；关键词；关键词*  }
+\end{CJK*}
+}\\[2mm]
+\zihao{5-}{\begin{CJK*}{GBK}{hei}中图法分类号\end{CJK*}	\begin{CJK*}{GBK}{song}
+TP\end{CJK*}\rm{\quad \quad \quad     }
+\begin{CJK*}{GBK}{hei}DOI号:\end{CJK*}\begin{CJK*}{GBK}{song}
+*投稿时不提供DOI号\end{CJK*}}
+\end{tabular}}
+
+\vskip 7mm
+
+\begin{center}
+\zihao{3}{ {\begin{CJK*}{GBK}{hei}Title *（中英文题目一致)字体为4号Times New Roman,加粗* Title\end{CJK*}}}\\
+\vspace {5mm}
+\zihao{5}{ {\begin{CJK*}{GBK}{hei}NAME Name-Name$^{1)}$ NAME Name$^{2)}$ NAME Name-Name$^{3)}$ *字体为5号Times
+new Roman*Name\end{CJK*}
+}}\\
+\vspace {2mm}
+\zihao{6}{\begin{CJK*}{GBK}{hei}{$^{1)}$(Department of ****, University, City ZipCode, China) *字体为6号Times
+new Roman* Depart.Correspond}\end{CJK*}}
+
+\zihao{6}{\begin{CJK*}{GBK}{hei}{$^{2)}$(Department of ****, University, City ZipCode)*中国不写国家名*}\end{CJK*}}
+
+\zihao{6}{\begin{CJK*}{GBK}{hei}{$^{3)}$(Department of ****, University, City ZipCode, country)*外国写国家名*}\end{CJK*}}
+
+
+
+\end{center}
+
+\begin{tabular}{p{160mm}}
+\zihao{5}{
+\setlength{\baselineskip}{18pt}\selectfont{
+{\bf Abstract}\quad \begin{CJK*}{GBK}{hei}(\textbf{500英文单词，内容包含中文摘要的内容}).
+字体为Times new Roman,字号5号* Abstract\end{CJK*}
+\par}}\\
+
+\setlength{\baselineskip}{18pt}\selectfont{
+\zihao{5}{\noindent Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. and Tables, create a new break line and paste the resized artworks where desired. Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. All Schemes, Equations, Figures, and Tables should be mentioned in the text consecutively and numbered with Arabic numerals, and appear below where they are mentioned for the first time in the main text. To insert Schemes, Equations, Figures, and Tables, create a new break line and paste the resized artworks where desired. Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred.Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. and Tables, create a new break line and paste the resized artworks where desired. Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. All Schemes, Equations, Figures, and Tables should be mentioned in the text consecutively and numbered with Arabic numerals, and appear below where they are mentioned for the first time in the main text.
+
+\vspace {5mm}
+{\bf Keywords}\quad \begin{CJK*}{GBK}{hei}中文关键字与英文关键字对应且一致，\textbf{不要用英文缩写});
+key word; key word; key word* *字体为5号Times new Roman * Key words\end{CJK*}}\par}
+\end{tabular}
+
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.05cm}p{16.15cm}}
+\multicolumn{2}{l}{\rule[4mm]{40mm}{0.1mm}}\\[-3mm]
+&\begin{CJK*}{GBK}{gbsn}
+收稿日期：\quad \quad -\quad -\quad ；最终修改稿收到日期：\quad \quad -\quad -\quad .*投稿时不填写此项*. 本课题得到… …基金中文完整名称(No.项目号)、… …基金中文完整名称(No.项目号)、… … 基金中文完整名称(No.项目号)资助.作者名1(通信作者)，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.作者名2（通信作者)，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************. 作者名3（通信作者)，性别，xxxx年生，学位(或目前学历)，职称，是/否计算机学会(CCF)会员（提供会员号),主要研究领域为*****、****.E-mail: **************.(给出的电子邮件地址应不会因出国、毕业、更换工作单位等原因而变动。请给出所有作者的电子邮件)
+第1作者手机号码(投稿时必须提供，以便紧急联系，发表时会删除): … …, E-mail: … …*此部分6号宋体*
+\end{CJK*}
+\end{tabular}\end{table*}
+\clearpage\clearpage
+\begin{strip}
+\vspace {-13mm}
+\end{strip}
+    \linespread{1.15}
+
+\begin{CJK*}{GBK}{hei}
+\input{sections/intro.tex}
+
+\input{sections/soc_rec.tex}
+
+\input{sections/refs.tex}
+
+\input{sections/appendix.tex}
+
+\end{CJK*}
+
+\end{document}
+
+
